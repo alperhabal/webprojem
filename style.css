@@ -1,3 +1,5 @@
+body{background-color: #efe735}
+
 #sayfa {
  width: 1000px;
  margin-right: auto;
@@ -140,80 +142,91 @@
 
 
 
-
-
-
-
-.stage {
-  height: 300px;
-  width: 500px;
-  margin: left;
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  perspective: 9999px;
-  transform-style: preserve-3d;
+#slider {
+  background:#fff url(loading.gif) no-repeat 50% 50%;
+  position:relative;
+  margin:0 auto;/*make the image slider center-aligned */
+    box-shadow: 0px 1px 5px #999999;
+}
+#slider img {
+  position:absolute;
+  border:none;
+  display:none;
 }
 
-.layer {
-  width: 100%;
- 
-  height: 100%;
-  position: absolute;
-  transform-style: preserve-3d;
-  animation: ಠ_ಠ 5s infinite alternate ease-in-out -7.5s;
-  animation-fill-mode: forwards;
-  transform: rotateY(40deg) rotateX(33deg) translateZ(0);
+/* the link style (if an image is wrapped in a link) */
+#slider a.imgLink {
+  z-index:2;
+  display:none;position:absolute;
+  top:0px;left:0px;border:0;padding:0;margin:0;
+  width:100%;height:100%;
 }
 
-.layer:after {
-  font: 75px/0.65 'Pacifico', 'Kaushan Script', Futura, 'Roboto', 'Trebuchet MS', Helvetica, sans-serif;
-  content: 'Cycling\A    style!';
-  white-space: pre;
-  text-align: center;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 50px; 
-  color: darken(#fff, 4%);
-  letter-spacing: -2px;
-  text-shadow: 4px 0 10px hsla(0, 0%, 0%, .13);
+/* Caption styles */
+div.mc-caption-bg, div.mc-caption-bg2 {
+  position:absolute;
+  width:100%;
+  height:auto;
+  padding:0;
+  left:0px; 
+  bottom:15px;
+  z-index:3;
+  overflow:hidden;
+  font-size: 0;
+}
+div.mc-caption-bg {
+  background-color:black;
+}
+div.mc-caption {
+  font: bold 14px/20px Arial;
+  color:#EEE;
+  z-index:4;
+  padding:10px 0;
+  text-align:center;
+}
+div.mc-caption a {
+  color:#FB0;
+}
+div.mc-caption a:hover {
+  color:#DA0;
 }
 
-$i: 1;
-$NUM_LAYERS: 20;
-@for $i from 1 through $NUM_LAYERS {
-  .layer:nth-child(#{$i}):after{
-    transform: translateZ(($i - 1) * -1.5px);
-  }
+
+/* ------ built-in navigation bullets wrapper ------*/
+div.navBulletsWrapper  {
+  top:320px; left:280px; /* Its position is relative to the #slider */
+  width:150px;
+  background:none;
+  padding-left:20px;
+  position:relative;
+  z-index:5;
+  cursor:pointer;
 }
 
-.layer:nth-child(n+#{round($NUM_LAYERS/2)}):after {
-  -webkit-text-stroke: 3px hsla(0, 0%, 0%, .25);
+/* each bullet */
+div.navBulletsWrapper div 
+{
+    width:11px; height:11px;
+    background:transparent url(../resim/bullet.png) no-repeat 0 0;
+    float:left;overflow:hidden;vertical-align:middle;cursor:pointer;
+    margin-right:11px;/* distance between each bullet*/
+    _position:relative;/*IE6 hack*/
 }
 
-.layer:nth-child(n+#{round($NUM_LAYERS/2 + 1)}):after {
-  -webkit-text-stroke: 15px dodgerblue;
-  text-shadow: 6px 0 6px darken(dodgerblue,35%),
-               5px 5px 5px darken(dodgerblue,40%),
-               0 6px 6px darken(dodgerblue,35%);
+div.navBulletsWrapper div.active {background-position:0 -11px;}
+
+
+/* --------- Others ------- */
+#slider 
+{
+  transform: translate3d(0,0,0);
+    -ms-transform:translate3d(0,0,0);
+    -moz-transform:translate3d(0,0,0);
+    -o-transform:translate3d(0,0,0);
 }
 
-.layer:nth-child(n+#{round($NUM_LAYERS/2 + 2)}):after {
-  -webkit-text-stroke: 15px darken(dodgerblue, 10%);
-}
 
-.layer:last-child:after {
-  -webkit-text-stroke: 17px hsla(0, 0%, 0%, .1);
-}
 
-.layer:first-child:after{
-  color: #fff;
-  text-shadow: none;
-}
-
-@keyframes ಠ_ಠ {
-  100% { transform: rotateY(-40deg) rotateX(-43deg); }
-}
 
 
 
