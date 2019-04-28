@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Kayıt Ol</title>
+<link rel="stylesheet" type="text/css" href="faceeeee.css"/>
+<script src="jquery-3.1.1.min.js">
+</script>
+
+
+</head>
+
+<body>
+<div id="a4">
+<div class="container">
+<img src="resimler/wewr.png"/>
+  <form method="post" action="../Untitled-1.html">
+  
+    <div class="form-input">
+    <input id="kul"  type="text" name="kullanıcı adı"
+    placeholder="adınızı girin">
+</div>
+    <div class="form-input">
+    <input id="sıf" type="password" name="sifre"
+    placeholder="paralonuzu girin">
+    </div>
+      <input type="submit"  name="giriş" value="giriş" class="btn-gırıs"/>
+
+     </div>
+ </form>
+</div>    
+    
+    
+<script>
+ $(function(){
+	
+	$('.btn-gırıs').click(function(){
+		var kul=$('#kul').val();
+		alert(kul);
+	});
+	$('.btn-gırıs').click(function()
+	{
+		var sifre=$('#sıf').val();
+		var boyut=sifre.length;
+		if(boyut<=4)
+		alert("şifre 4 haneden küçük");
+		else
+		alert("Üye Olduğunuz İçin Teşekkürler"); 
+		
+	});
+ });
+
+</script>
+
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#a4").toggle();
+    });
+});
+</script>
+
+<button  style="width:150px; 
+height:50px; background-color:#DE2425;margin-left:1200px; padding-top:-550px; position:absolute;">Üyelik Formunu Görmek İçin Tıklayınız </button>
+
+
+  
+</body>
+</html>

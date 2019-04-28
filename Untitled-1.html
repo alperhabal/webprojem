@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Başlıksız Belge</title>
+<link rel="stylesheet" type="text/css" href="Untitled-2.css">
+<script src="jquery-3.1.1.min.js"></script>
+
+</head>
+
+
+<body bgcolor="#000";>
+<div id="logtut">
+<a href="Untitled-1.html">
+<img  src="Başlıksız-4.png"></a>
+
+</div>
+
+<div id="ictut">
+<img src="icon_telefon_256.png">
+<p style="color:#FFF;font-family:fantasy; font-size:26px;margin-top:-40px;padding-left:80px;">05384016199</p>
+
+</div>
+
+
+
+
+
+<nav>
+<div id="menu">
+<ul style="font-family:fantasy; font-size:18px;">
+<li><a href="Untitled-1.html">Anasayfa</a></li>
+<li><a href="Kayıt Ol/faceee.html">Kayıt Ol</a></li>
+<li><a href="Hakkımızda/index.html">Hakkımızda</a></li>
+<li><a href="Galeri/Untitled-1.1.html">Galeri</a></li>
+<li><a href="İletişim/index.html">İletişim</a></li>
+
+
+
+</ul>
+
+</div>
+
+</nav>
+
+
+<div id="slider">
+<ul>
+
+<li><a href="#"><img src="dogma_05_big.jpg"/></a></li>
+<li><a href="#"><img src="239cff_70314bab079f4fb38bbad51ef774a4ab.jpg"/></a></li>
+<li><a href="#"><img src="collection2017_f8_001.jpg"/></a></li>
+<li><a href="#"><img src="dogma_01_big.jpg"/></a></li>
+<li><a href="#"><img src="iyimuk.png"/></a></li>
+<li><a href="#"><img src="sdfs.png"/></a></li>
+
+
+
+
+
+</ul>
+<div>
+<img style="width:80px; height:80px; margin-top:80px; cursor:pointer;" src="bicycle-256 - Kopya.png" class="onceki"> 
+<img style="width:80px; height:80px; margin-top:80px; cursor:pointer;" src="bicycle-256.png" class="sonraki">
+</div>
+
+
+</div>
+</div>
+<div id="a4">
+<div id="uruntut">
+<div id="urunler">
+<div id="resimtut">
+<img src="bicycle_PNG5356.png">
+</div>
+<div id="marka">
+<p style="font-family:fantasy; font-size:17px; margin-left:5px; color:#FFF;">AR1 w/ SRAM RED eTAP</p>
+</div>
+
+<div id="urunler2">
+<div id="resimtut2">
+<img src="trek-domane-4.1-rutland-cycling.png">
+</div>
+<div id="marka2">
+<p style="font-family:fantasy; font-size:17px; margin-left:5px; color:#FFF;">TREK 1.1 C H2 </p>
+</div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+$(function(){
+	$('#slider').mouseover(function(){
+		clearInterval(surekli);
+	});
+	$('.sayilar a').click(function(){
+		var i=$(this).index();
+		var kaydirma_miktari=1200*i;
+		$('#slider ul').animate({right:kaydirma_miktari+"px"},1200);
+   });
+   var sayi=0;
+   function tekrarla()
+   {
+	   kaydirma_miktari=1200*sayi;
+	   $('#slider ul').animate({right:kaydirma_miktari+"px"},1200);
+	   sayi++;
+	   if(sayi==6)
+	   sayi=0;
+   }
+     var surekli=setInterval(tekrarla,2000);
+});
+var sayi=0;
+$(function(){
+	$(".sonraki").click(function(){
+		if(sayi<5)
+		{
+			sayi++;
+			var kaydirmamiktari=1200*sayi;
+			$("#slider ul").animate({right:kaydirmamiktari+"px"},500);
+		}
+		});
+		$(".onceki").click(function(){
+		if(sayi>0)
+		{
+			sayi--;
+			var kaydirmamiktari=1200*sayi;
+			$("#slider ul").animate({right:kaydirmamiktari+"px"},500);
+		}
+		});
+	});
+</script>
+
+
+
+<div id="yanrestut">
+
+<img src="logoheader-01.png">
+</div>
+
+
+
+
+</body>
+</html>

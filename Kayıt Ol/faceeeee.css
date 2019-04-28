@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	margin:auto;
+	background-image:url(BIANCHI_bicycle_bike_3543x2300.jpg);
+	
+	background-repeat:no-repeat;
+	background-size: 100% 720px;
+	
+	}
+#a4{
+	display:none;
+	margin:auto;
+	width: 510px;
+		height: 410px;}
+	.container{
+		width: 500px;
+		height: 400px;
+		text-align:center;
+		background-color:#DE2425;
+		border-radius: 4px;
+		margin: 0 auto;
+		margin-top: 150px;
+		}
+		.container img{
+			width: 120px;
+			height: 120px;
+			margin-top: -60px;
+			margin-bottom: 30px;
+			
+			}
+		input {
+			height: 45px;
+			width: 300px;
+			font-size: 18px;
+			margin-bottom: 10px;
+			background-color:#fff;
+			padding-left: 30px; 
+			
+	}
+#kul{
+	background-image:url(resimler/kullan%C4%B1c%C4%B1.png);
+	background-repeat:no-repeat;
+	background-position:left;
+	
+	padding-left:35px;	
+	color:#0F0;
+	height:35px;
+	
+	
+}
+#sıf{
+		background-image:url(resimler/weere.png);
+	background-repeat:no-repeat;
+	background-position:left;
+	padding-left:35px;	
+	color:#0F0;
+	height:35px;
+	
+	}
+	.btn-gırıs{
+		padding: 15px 25px;
+		color:#606;
+		border-radius: 4px;
+		border:none;
+		background-color:#0F9;
+		
+		
+		
+		}
+		p{
+			color:#DE2425;}
+		
