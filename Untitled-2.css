@@ -22,7 +22,7 @@ nav{
 	height:50px;
 	background-color:#DE2425;}
 #menu{
-	padding-left:172px;
+	
 	
 	width:1074px;
 	height:50px;
@@ -54,7 +54,7 @@ nav #menu ul li:hover{
 #ictut{
 	width:50px;
 	height:50px;
-	padding-left:1010px;
+	margin-left: 1500px;
 	margin-top:-130px;}
 #ictut img{
 	height:100%;
